@@ -2,7 +2,7 @@ Sure, here's a basic template for a README file for your "AI_IMAGE_GENERATOR_MER
 
 ---
 
-# AI Image Generator (MERN Stack)
+# ImaGeine 
 
 ## Overview
 This project implements an AI-powered image generator using the Limewire API within a MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to generate images based on prompts provided, leveraging AI capabilities for creative output.
