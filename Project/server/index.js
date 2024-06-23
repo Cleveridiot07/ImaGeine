@@ -9,9 +9,9 @@ dotenv.config();
 
 const app = express();
 
-// Configure CORS
+// Configure CORS to accept requests from all origins
 app.use(cors({
-  origin: ["https://imageinefrontend-cleveridiot07s-projects.vercel.app"],
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
