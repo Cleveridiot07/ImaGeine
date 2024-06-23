@@ -7,24 +7,24 @@ import posts from "./routes/Posts.js";
 
 dotenv.config();
 
-
-
 const app = express();
 
-const corsOptions = {
-  origin: ["https://ima-geinebackend-git-main-cleveridiot07s-projects.vercel.app//api","https://imageinefrontend-cleveridiot07s-projects.vercel.app"],
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: "Content-Type,Authorization",
-};
+// Configure CORS
+app.use(cors({
+  origin: ["https://imageinefrontend-cleveridiot07s-projects.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+}));
 
-app.use(cors(corsOptions));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true })); // for form data
 
 app.use("/api/generateImage/", generateImageRoute);
 app.use("/api/post/", posts);
 
-// error handler
+// Error handler
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || "Something went wrong";
