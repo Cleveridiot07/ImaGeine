@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Setup axios instance
 const API = axios.create({
-  baseURL: "https://ima-geinebackend-git-main-cleveridiot07s-projects.vercel.app//api/",
+  baseURL: "https://ima-geinebackend-git-main-cleveridiot07s-projects.vercel.app//api",
 });
 
 // Function to generate image from prompt
