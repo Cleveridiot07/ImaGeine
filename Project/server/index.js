@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: ["https://ima-geinebackend-git-main-cleveridiot07s-projects.vercel.app//api"],
+  origin: ["https://ima-geinebackend-git-main-cleveridiot07s-projects.vercel.app//api","https://imageinefrontend-cleveridiot07s-projects.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type,Authorization",
 };
