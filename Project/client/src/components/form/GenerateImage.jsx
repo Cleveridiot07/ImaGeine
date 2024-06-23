@@ -82,8 +82,8 @@ const GenerateImage = ({
 
       setGenerateImageLoading(false);
     } catch (error) {
-      console.log(error);
-      setError(error?.response?.data?.message || "Error generating image");
+      console.log("Test",error);
+      setError(error?.message || "Error in generating image");
       setGenerateImageLoading(false);
     }
   };
